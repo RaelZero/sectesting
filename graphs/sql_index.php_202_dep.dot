@@ -1,5 +1,0 @@
-digraph cfg {
-  label="sql_index.php_202_dep";
-  labelloc=t;
-  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/EditClass.php : 78\nLit: SELECT teacherid,fname,lname,userid FROM teachers\n"];
-}

@@ -1,5 +1,0 @@
-digraph cfg {
-  label="sql_index.php_29_dep";
-  labelloc=t;
-  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageUsers.php : 6\nLit: SELECT username FROM users\n"];
-}

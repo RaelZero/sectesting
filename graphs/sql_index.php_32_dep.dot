@@ -1,5 +1,0 @@
-digraph cfg {
-  label="sql_index.php_32_dep";
-  labelloc=t;
-  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageParents.php : 8\nLit: SELECT userid FROM parents\n"];
-}

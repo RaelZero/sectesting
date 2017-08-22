@@ -1,5 +1,0 @@
-digraph cfg {
-  label="sql_index.php_273_dep";
-  labelloc=t;
-  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageAssignments.php : 196\nLit: SELECT COUNT(*) FROM assignments\n"];
-}
