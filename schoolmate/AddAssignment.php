@@ -32,7 +32,7 @@
   <input type='hidden' name='addassignment' value=''>
   <input type='hidden' name='page2' value='$page2'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='selectclass' value='.intval($_POST[selectclass]).' />
+  <input type='hidden' name='selectclass' value='". intval($_POST[selectclass]) ."' />
   <input type='hidden' name='page' value='$page'>
 
  </form>
