@@ -5,7 +5,7 @@
   die("Invalid User!");
  }
 
- $page2 = $_POST["page2"];
+ $page2 = intval($_POST["page2"]);
 
  print("<script language='JavaScript'>
 
