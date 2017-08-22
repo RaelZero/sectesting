@@ -1,4 +1,7 @@
 pixy/
 /index.html
 /index.php
+
+# WebScarab files
 webscarab*
+.keystore
