@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_68_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ViewAnnouncements.php : 18\nLit: SELECT COUNT(*) FROM schoolbulletins\n"];
+}

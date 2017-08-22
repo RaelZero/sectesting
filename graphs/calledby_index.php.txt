@@ -1,0 +1,100 @@
+deleteregistration called by:
+/var/www/html/schoolmate/Registration.php:79
+
+deletestudent called by:
+/var/www/html/schoolmate/ManageStudents.php:48
+/var/www/html/schoolmate/DeleteFunctions.php:117
+
+deleteattendance called by:
+/var/www/html/schoolmate/ManageAttendance.php:24
+
+converttodb called by:
+/var/www/html/schoolmate/ManageGrades.php:20
+/var/www/html/schoolmate/ManageGrades.php:11
+/var/www/html/schoolmate/ManageAssignments.php:51
+/var/www/html/schoolmate/ManageAssignments.php:51
+/var/www/html/schoolmate/ManageAssignments.php:19
+/var/www/html/schoolmate/ManageAssignments.php:20
+/var/www/html/schoolmate/ManageAttendance.php:12
+/var/www/html/schoolmate/ManageTerms.php:15
+/var/www/html/schoolmate/ManageTerms.php:16
+/var/www/html/schoolmate/ManageTerms.php:6
+/var/www/html/schoolmate/ManageTerms.php:7
+/var/www/html/schoolmate/ManageSemesters.php:16
+/var/www/html/schoolmate/ManageSemesters.php:17
+/var/www/html/schoolmate/ManageSemesters.php:18
+/var/www/html/schoolmate/ManageSemesters.php:6
+/var/www/html/schoolmate/ManageSemesters.php:7
+/var/www/html/schoolmate/ManageSemesters.php:8
+/var/www/html/schoolmate/ManageAnnouncements.php:15
+
+deleteuser called by:
+/var/www/html/schoolmate/ManageUsers.php:53
+
+deleteassignments called by:
+/var/www/html/schoolmate/ManageAssignments.php:111
+
+deleteparent called by:
+/var/www/html/schoolmate/ManageParents.php:62
+/var/www/html/schoolmate/DeleteFunctions.php:128
+
+deleteadmin called by:
+/var/www/html/schoolmate/DeleteFunctions.php:139
+
+deleteteacher called by:
+/var/www/html/schoolmate/ManageTeachers.php:48
+/var/www/html/schoolmate/DeleteFunctions.php:106
+
+deletesemester called by:
+/var/www/html/schoolmate/ManageSemesters.php:31
+
+deleteterm called by:
+/var/www/html/schoolmate/ManageTerms.php:29
+
+deleteannouncement called by:
+/var/www/html/schoolmate/ManageAnnouncements.php:27
+
+deletegrade called by:
+/var/www/html/schoolmate/ManageGrades.php:61
+
+deletecourse called by:
+/var/www/html/schoolmate/ManageClasses.php:92
+/var/www/html/schoolmate/ManageClasses.php:93
+
+convertfromdb called by:
+/var/www/html/schoolmate/ViewAnnouncements.php:45
+/var/www/html/schoolmate/ViewGrades.php:51
+/var/www/html/schoolmate/ViewGrades.php:51
+/var/www/html/schoolmate/ViewAssignments.php:56
+/var/www/html/schoolmate/ViewAssignments.php:57
+/var/www/html/schoolmate/ViewAnnouncements.php:45
+/var/www/html/schoolmate/ViewGrades.php:51
+/var/www/html/schoolmate/ViewGrades.php:51
+/var/www/html/schoolmate/ViewAssignments.php:56
+/var/www/html/schoolmate/ViewAssignments.php:57
+/var/www/html/schoolmate/ViewAnnouncements.php:45
+/var/www/html/schoolmate/EditGrade.php:32
+/var/www/html/schoolmate/EditGrade.php:50
+/var/www/html/schoolmate/EditGrade.php:50
+/var/www/html/schoolmate/EditGrade.php:32
+/var/www/html/schoolmate/EditAssignment.php:26
+/var/www/html/schoolmate/EditAssignment.php:27
+/var/www/html/schoolmate/ManageGrades.php:220
+/var/www/html/schoolmate/ManageGrades.php:220
+/var/www/html/schoolmate/ManageAssignments.php:222
+/var/www/html/schoolmate/ManageAssignments.php:223
+/var/www/html/schoolmate/ManageAttendance.php:164
+/var/www/html/schoolmate/ManageAttendance.php:163
+/var/www/html/schoolmate/EditAnnouncements.php:23
+/var/www/html/schoolmate/EditSemester.php:37
+/var/www/html/schoolmate/EditSemester.php:38
+/var/www/html/schoolmate/EditSemester.php:39
+/var/www/html/schoolmate/EditTerm.php:22
+/var/www/html/schoolmate/EditTerm.php:23
+/var/www/html/schoolmate/ManageTerms.php:133
+/var/www/html/schoolmate/ManageTerms.php:134
+/var/www/html/schoolmate/ManageSemesters.php:143
+/var/www/html/schoolmate/ManageSemesters.php:144
+/var/www/html/schoolmate/ManageSemesters.php:145
+/var/www/html/schoolmate/ManageAnnouncements.php:135
+

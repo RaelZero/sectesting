@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_109_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/VisualizeClasses.php : 30\nLit: SELECT numperiods FROM schoolinfo\n"];
+}

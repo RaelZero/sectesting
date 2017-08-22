@@ -1,0 +1,75 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  0 -> 15 [label="m"]
+  1 [shape=circle,label=""];
+  1 -> 23 [label="\u0020"]
+  2 [shape=circle,label=""];
+  2 -> 5 [label="t"]
+  3 [shape=circle,label=""];
+  3 -> 27 [label="E"]
+  4 [shape=circle,label=""];
+  4 -> 14 [label="W"]
+  5 [shape=circle,label=""];
+  5 -> 26 [label="e"]
+  6 [shape=circle,label=""];
+  6 -> 11 [label="E"]
+  7 [shape=circle,label=""];
+  7 -> 32 [label="M"]
+  8 [shape=circle,label=""];
+  8 -> 3 [label="T"]
+  9 [shape=circle,label=""];
+  9 -> 25 [label="s"]
+  10 [shape=circle,label=""];
+  10 -> 28 [label="L"]
+  11 [shape=circle,label=""];
+  11 -> 2 [label="\u0020"]
+  12 [shape=doublecircle,label=""];
+  12 -> 12 [label="@",color=red]
+  13 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 13
+  13 -> 22 [label="D"]
+  14 [shape=circle,label=""];
+  14 -> 29 [label="H"]
+  15 [shape=circle,label=""];
+  15 -> 17 [label="i"]
+  16 [shape=circle,label=""];
+  16 -> 31 [label="\u0020"]
+  17 [shape=circle,label=""];
+  17 -> 16 [label="d"]
+  18 [shape=circle,label=""];
+  18 -> 19 [label="t"]
+  19 [shape=circle,label=""];
+  19 -> 20 [label="e"]
+  20 [shape=circle,label=""];
+  20 -> 24 [label="r"]
+  21 [shape=circle,label=""];
+  21 -> 6 [label="R"]
+  22 [shape=circle,label=""];
+  22 -> 10 [label="E"]
+  23 [shape=doublecircle,label=""];
+  23 -> 12 [label="@",color=red]
+  24 [shape=circle,label=""];
+  24 -> 9 [label="m"]
+  25 [shape=circle,label=""];
+  25 -> 4 [label="\u0020"]
+  26 [shape=circle,label=""];
+  26 -> 0 [label="r"]
+  27 [shape=circle,label=""];
+  27 -> 30 [label="\u0020"]
+  28 [shape=circle,label=""];
+  28 -> 8 [label="E"]
+  29 [shape=circle,label=""];
+  29 -> 21 [label="E"]
+  30 [shape=circle,label=""];
+  30 -> 34 [label="F"]
+  31 [shape=circle,label=""];
+  31 -> 1 [label="="]
+  32 [shape=circle,label=""];
+  32 -> 18 [label="\u0020"]
+  33 [shape=circle,label=""];
+  33 -> 7 [label="O"]
+  34 [shape=circle,label=""];
+  34 -> 33 [label="R"]
+}

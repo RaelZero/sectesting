@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_120_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/AddParent.php : 32\nLit: SELECT u.userid,u.username FROM users u WHERE u.type='parent'\n"];
+}

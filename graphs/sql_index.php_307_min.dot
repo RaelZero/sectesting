@@ -1,0 +1,9 @@
+digraph cfg {
+  label="sql_index.php_307_min";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ReportCards.php : 476\nVar: _t1_2\nFunc: _main\n"];
+  n2 [shape=ellipse, label="/var/www/html/schoolmate/ReportCards.php : 476\nbuiltin function:\n.\n"];
+  n3 [shape=box, label="/var/www/html/schoolmate/ReportCards.php : 476\nVar: $_POST[term]\nFunc: _superglobals\n",style=filled];
+  n1 -> n2;
+  n2 -> n3;
+}

@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_57_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageSchoolInfo.php : 14\nLit: SELECT numsemesters FROM schoolinfo\n"];
+}

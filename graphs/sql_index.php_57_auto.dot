@@ -1,0 +1,76 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  0 -> 26 [label="\u0020"]
+  1 [shape=circle,label=""];
+  1 -> 13 [label="C"]
+  2 [shape=circle,label=""];
+  2 -> 30 [label="s"]
+  3 [shape=circle,label=""];
+  3 -> 22 [label="R"]
+  4 [shape=circle,label=""];
+  4 -> 11 [label="e"]
+  5 [shape=circle,label=""];
+  5 -> 32 [label="s"]
+  6 [shape=circle,label=""];
+  6 -> 9 [label="o"]
+  7 [shape=circle,label=""];
+  7 -> 4 [label="t"]
+  8 [shape=circle,label=""];
+  8 -> 16 [label="M"]
+  9 [shape=circle,label=""];
+  9 -> 20 [label="o"]
+  10 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 10
+  10 -> 29 [label="S"]
+  11 [shape=circle,label=""];
+  11 -> 2 [label="r"]
+  12 [shape=circle,label=""];
+  12 -> 15 [label="f"]
+  13 [shape=circle,label=""];
+  13 -> 0 [label="T"]
+  14 [shape=circle,label=""];
+  14 -> 34 [label="L"]
+  15 [shape=circle,label=""];
+  15 -> 31 [label="o"]
+  16 [shape=circle,label=""];
+  16 -> 25 [label="\u0020"]
+  17 [shape=circle,label=""];
+  17 -> 3 [label="F"]
+  18 [shape=circle,label=""];
+  18 -> 33 [label="u"]
+  19 [shape=circle,label=""];
+  19 -> 24 [label="c"]
+  20 [shape=circle,label=""];
+  20 -> 28 [label="l"]
+  21 [shape=circle,label=""];
+  21 -> 23 [label="e"]
+  22 [shape=circle,label=""];
+  22 -> 8 [label="O"]
+  23 [shape=circle,label=""];
+  23 -> 7 [label="s"]
+  24 [shape=circle,label=""];
+  24 -> 6 [label="h"]
+  25 [shape=circle,label=""];
+  25 -> 19 [label="s"]
+  26 [shape=circle,label=""];
+  26 -> 18 [label="n"]
+  27 [shape=circle,label=""];
+  27 -> 12 [label="n"]
+  28 [shape=circle,label=""];
+  28 -> 27 [label="i"]
+  29 [shape=circle,label=""];
+  29 -> 14 [label="E"]
+  30 [shape=circle,label=""];
+  30 -> 17 [label="\u0020"]
+  31 [shape=doublecircle,label=""];
+  32 [shape=circle,label=""];
+  32 -> 35 [label="e"]
+  33 [shape=circle,label=""];
+  33 -> 5 [label="m"]
+  34 [shape=circle,label=""];
+  34 -> 1 [label="E"]
+  35 [shape=circle,label=""];
+  35 -> 21 [label="m"]
+}

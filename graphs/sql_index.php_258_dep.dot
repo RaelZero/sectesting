@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_258_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/Registration.php : 167\nLit: SELECT semesterid, title FROM semesters\n"];
+}

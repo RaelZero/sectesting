@@ -1,0 +1,25 @@
+digraph cfg {
+  label="sql_index.php_122_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/EditStudent.php : 33\nVar: _t2_47\nFunc: _main\n"];
+  n2 [shape=ellipse, label="/var/www/html/schoolmate/EditStudent.php : 33\nbuiltin function:\n.\n"];
+  n3 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 33\nVar: _t2_47\nFunc: _main\n"];
+  n4 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 33\nLit: SELECT u.userid,u.username FROM users u LEFT JOIN students s ON u.userid = s.userid WHERE s.userid IS NULL AND (u.type='Student') OR u.userid = \n"];
+  n5 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 33\nVar: $currentuserid\nFunc: _main\n"];
+  n6 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 31\nVar: _t0_47\nFunc: _main\n"];
+  n7 [shape=ellipse, label="/var/www/html/schoolmate/EditStudent.php : 31\nbuiltin function:\nmysql_result\n"];
+  n8 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 31\nVar: $query\nFunc: _main\n"];
+  n9 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 29\nVar: _t1_47\nFunc: _main\n"];
+  n10 [shape=ellipse, label="/var/www/html/schoolmate/EditStudent.php : 29\nbuiltin function:\nmysql_query\n"];
+  n11 [shape=box, label="/var/www/html/schoolmate/EditStudent.php : 31\nLit: 0\n"];
+  n1 -> n2;
+  n3 -> n4;
+  n2 -> n3[label="Param #1"];
+  n2 -> n5[label="Param #2"];
+  n6 -> n7;
+  n9 -> n10;
+  n8 -> n9;
+  n7 -> n8[label="Param #1"];
+  n7 -> n11[label="Param #2"];
+  n5 -> n6;
+}

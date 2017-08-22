@@ -1,0 +1,78 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=doublecircle,label=""];
+  1 [shape=circle,label=""];
+  1 -> 24 [label="M"]
+  2 [shape=circle,label=""];
+  2 -> 26 [label="E"]
+  3 [shape=circle,label=""];
+  3 -> 5 [label="R"]
+  4 [shape=circle,label=""];
+  4 -> 10 [label="i"]
+  5 [shape=circle,label=""];
+  5 -> 1 [label="O"]
+  6 [shape=circle,label=""];
+  6 -> 9 [label="T"]
+  7 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 7
+  7 -> 14 [label="S"]
+  8 [shape=circle,label=""];
+  8 -> 13 [label="u"]
+  9 [shape=circle,label=""];
+  9 -> 17 [label="("]
+  10 [shape=circle,label=""];
+  10 -> 25 [label="n"]
+  11 [shape=circle,label=""];
+  11 -> 31 [label="O"]
+  12 [shape=circle,label=""];
+  12 -> 29 [label="l"]
+  13 [shape=circle,label=""];
+  13 -> 12 [label="l"]
+  14 [shape=circle,label=""];
+  14 -> 30 [label="E"]
+  15 [shape=circle,label=""];
+  15 -> 21 [label="o"]
+  16 [shape=circle,label=""];
+  16 -> 33 [label="\u0020"]
+  17 [shape=circle,label=""];
+  17 -> 27 [label="*"]
+  18 [shape=circle,label=""];
+  18 -> 28 [label="c"]
+  19 [shape=circle,label=""];
+  19 -> 22 [label="\u0020"]
+  20 [shape=circle,label=""];
+  20 -> 8 [label="b"]
+  21 [shape=circle,label=""];
+  21 -> 20 [label="l"]
+  22 [shape=circle,label=""];
+  22 -> 11 [label="C"]
+  23 [shape=circle,label=""];
+  23 -> 4 [label="t"]
+  24 [shape=circle,label=""];
+  24 -> 32 [label="\u0020"]
+  25 [shape=circle,label=""];
+  25 -> 0 [label="s"]
+  26 [shape=circle,label=""];
+  26 -> 34 [label="C"]
+  27 [shape=circle,label=""];
+  27 -> 16 [label=")"]
+  28 [shape=circle,label=""];
+  28 -> 36 [label="h"]
+  29 [shape=circle,label=""];
+  29 -> 23 [label="e"]
+  30 [shape=circle,label=""];
+  30 -> 2 [label="L"]
+  31 [shape=circle,label=""];
+  31 -> 35 [label="U"]
+  32 [shape=circle,label=""];
+  32 -> 18 [label="s"]
+  33 [shape=circle,label=""];
+  33 -> 3 [label="F"]
+  34 [shape=circle,label=""];
+  34 -> 19 [label="T"]
+  35 [shape=circle,label=""];
+  35 -> 6 [label="N"]
+  36 [shape=circle,label=""];
+  36 -> 15 [label="o"]
+}

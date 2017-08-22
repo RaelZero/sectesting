@@ -1,0 +1,148 @@
+/var/www/html/schoolmate/ManageStudents.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/AddClass.php
+/var/www/html/schoolmate/VisualizeRegistration.php
+/var/www/html/schoolmate/PointsReport.php
+/var/www/html/schoolmate/index.php
+- /var/www/html/schoolmate/header.php
+- /var/www/html/schoolmate/StudentMain.php
+- /var/www/html/schoolmate/TeacherMain.php
+- /var/www/html/schoolmate/AdminMain.php
+- /var/www/html/schoolmate/ReportCards.php
+- /var/www/html/schoolmate/ParentMain.php
+- /var/www/html/schoolmate/Connect.php
+- /var/www/html/schoolmate/footer.php
+- /var/www/html/schoolmate/Login.php
+- /var/www/html/schoolmate/ValidateLogin.php
+/var/www/html/schoolmate/EditStudent.php
+/var/www/html/schoolmate/ManageSchoolInfo.php
+/var/www/html/schoolmate/ManageGrades.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/VisualizeClasses.php
+/var/www/html/schoolmate/ManageTeachers.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/ViewAssignments.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/Connect.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/ManageAttendance.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/header.php
+/var/www/html/schoolmate/StudentMain.php
+- /var/www/html/schoolmate/StudentViewCourses.php
+- /var/www/html/schoolmate/ViewGrades.php
+- /var/www/html/schoolmate/ViewAssignments.php
+- /var/www/html/schoolmate/ViewClassSettings.php
+- /var/www/html/schoolmate/ViewAnnouncements.php
+- /var/www/html/schoolmate/maketop.php
+/var/www/html/schoolmate/AddTerm.php
+/var/www/html/schoolmate/ViewClassSettings.php
+/var/www/html/schoolmate/AddParent.php
+/var/www/html/schoolmate/footer.php
+/var/www/html/schoolmate/DeficiencyReport.php
+/var/www/html/schoolmate/EditParent.php
+/var/www/html/schoolmate/EditTerm.php
+/var/www/html/schoolmate/StudentViewCourses.php
+/var/www/html/schoolmate/EditTeacher.php
+/var/www/html/schoolmate/AddAttendance.php
+/var/www/html/schoolmate/AddTeacher.php
+/var/www/html/schoolmate/AddAssignment.php
+/var/www/html/schoolmate/EditAssignment.php
+/var/www/html/schoolmate/ManageAnnouncements.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/ManageParents.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/Registration.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/ViewStudents.php
+/var/www/html/schoolmate/EditUser.php
+/var/www/html/schoolmate/EditAnnouncements.php
+/var/www/html/schoolmate/AddSemester.php
+/var/www/html/schoolmate/AddStudent.php
+/var/www/html/schoolmate/ParentMain.php
+- /var/www/html/schoolmate/ParentViewCourses.php
+- /var/www/html/schoolmate/ViewGrades.php
+- /var/www/html/schoolmate/ParentViewStudents.php
+- /var/www/html/schoolmate/ViewAssignments.php
+- /var/www/html/schoolmate/ViewClassSettings.php
+- /var/www/html/schoolmate/ViewAnnouncements.php
+- /var/www/html/schoolmate/maketop.php
+/var/www/html/schoolmate/EditClass.php
+/var/www/html/schoolmate/ViewAnnouncements.php
+/var/www/html/schoolmate/maketop.php
+/var/www/html/schoolmate/EditGrade.php
+/var/www/html/schoolmate/AddAnnouncements.php
+/var/www/html/schoolmate/ParentViewCourses.php
+/var/www/html/schoolmate/ManageAssignments.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/ViewGrades.php
+- /var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/ParentViewStudents.php
+/var/www/html/schoolmate/AdminMain.php
+- /var/www/html/schoolmate/ManageStudents.php
+- /var/www/html/schoolmate/ManageAnnouncements.php
+- /var/www/html/schoolmate/AddClass.php
+- /var/www/html/schoolmate/ManageParents.php
+- /var/www/html/schoolmate/VisualizeRegistration.php
+- /var/www/html/schoolmate/PointsReport.php
+- /var/www/html/schoolmate/Registration.php
+- /var/www/html/schoolmate/EditStudent.php
+- /var/www/html/schoolmate/EditUser.php
+- /var/www/html/schoolmate/EditAnnouncements.php
+- /var/www/html/schoolmate/ManageSchoolInfo.php
+- /var/www/html/schoolmate/AddSemester.php
+- /var/www/html/schoolmate/VisualizeClasses.php
+- /var/www/html/schoolmate/AddStudent.php
+- /var/www/html/schoolmate/ManageTeachers.php
+- /var/www/html/schoolmate/EditClass.php
+- /var/www/html/schoolmate/maketop.php
+- /var/www/html/schoolmate/AddAnnouncements.php
+- /var/www/html/schoolmate/ManageAttendance.php
+- /var/www/html/schoolmate/AddTerm.php
+- /var/www/html/schoolmate/ManageClasses.php
+- /var/www/html/schoolmate/AddParent.php
+- /var/www/html/schoolmate/GradeReport.php
+- /var/www/html/schoolmate/EditParent.php
+- /var/www/html/schoolmate/DeficiencyReport.php
+- /var/www/html/schoolmate/EditSemester.php
+- /var/www/html/schoolmate/AddUser.php
+- /var/www/html/schoolmate/EditTerm.php
+- /var/www/html/schoolmate/ManageTerms.php
+- /var/www/html/schoolmate/EditTeacher.php
+- /var/www/html/schoolmate/ManageUsers.php
+- /var/www/html/schoolmate/ManageSemesters.php
+- /var/www/html/schoolmate/AddAttendance.php
+- /var/www/html/schoolmate/AddTeacher.php
+/var/www/html/schoolmate/ManageClasses.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/DBFunctions.php
+/var/www/html/schoolmate/GradeReport.php
+/var/www/html/schoolmate/ViewCourses.php
+/var/www/html/schoolmate/EditSemester.php
+/var/www/html/schoolmate/ValidateLogin.php
+/var/www/html/schoolmate/Login.php
+- /var/www/html/schoolmate/maketop.php
+/var/www/html/schoolmate/AddUser.php
+/var/www/html/schoolmate/ManageTerms.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/ClassSettings.php
+/var/www/html/schoolmate/ManageUsers.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/ManageSemesters.php
+- /var/www/html/schoolmate/DeleteFunctions.php
+/var/www/html/schoolmate/TeacherMain.php
+- /var/www/html/schoolmate/ClassSettings.php
+- /var/www/html/schoolmate/ViewStudents.php
+- /var/www/html/schoolmate/ManageGrades.php
+- /var/www/html/schoolmate/EditAssignment.php
+- /var/www/html/schoolmate/ManageAssignments.php
+- /var/www/html/schoolmate/AddAssignment.php
+- /var/www/html/schoolmate/ViewAnnouncements.php
+- /var/www/html/schoolmate/maketop.php
+- /var/www/html/schoolmate/EditGrade.php
+- /var/www/html/schoolmate/ViewCourses.php
+/var/www/html/schoolmate/ReportCards.php

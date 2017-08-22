@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_148_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/DeficiencyReport.php : 46\nLit: SELECT studentid, courseid FROM registrations ORDER BY courseid\n"];
+}

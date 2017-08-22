@@ -1,0 +1,70 @@
+digraph Automaton {
+  rankdir = LR;
+  0 [shape=circle,label=""];
+  0 -> 19 [label="g"]
+  1 [shape=circle,label=""];
+  1 -> 26 [label="s"]
+  2 [shape=circle,label=""];
+  2 -> 9 [label="O"]
+  3 [shape=circle,label=""];
+  3 -> 2 [label="C"]
+  4 [shape=circle,label=""];
+  4 -> 28 [label="E"]
+  5 [shape=circle,label=""];
+  5 -> 6 [label="*"]
+  6 [shape=circle,label=""];
+  6 -> 7 [label=")"]
+  7 [shape=circle,label=""];
+  7 -> 20 [label="\u0020"]
+  8 [shape=circle,label=""];
+  8 -> 1 [label="t"]
+  9 [shape=circle,label=""];
+  9 -> 16 [label="U"]
+  10 [shape=circle,label=""];
+  10 -> 11 [label="a"]
+  11 [shape=circle,label=""];
+  11 -> 24 [label="s"]
+  12 [shape=circle,label=""];
+  12 -> 21 [label="T"]
+  13 [shape=circle,label=""];
+  13 -> 31 [label="M"]
+  14 [shape=circle,label=""];
+  14 -> 12 [label="C"]
+  15 [shape=circle,label=""];
+  15 -> 17 [label="R"]
+  16 [shape=circle,label=""];
+  16 -> 25 [label="N"]
+  17 [shape=circle,label=""];
+  17 -> 13 [label="O"]
+  18 [shape=circle,label=""];
+  18 -> 29 [label="e"]
+  19 [shape=circle,label=""];
+  19 -> 27 [label="n"]
+  20 [shape=circle,label=""];
+  20 -> 15 [label="F"]
+  21 [shape=circle,label=""];
+  21 -> 3 [label="\u0020"]
+  22 [shape=circle,label=""];
+  22 -> 14 [label="E"]
+  23 [shape=circle,label=""];
+  23 -> 0 [label="i"]
+  24 [shape=circle,label=""];
+  24 -> 23 [label="s"]
+  25 [shape=circle,label=""];
+  25 -> 30 [label="T"]
+  26 [shape=doublecircle,label=""];
+  27 [shape=circle,label=""];
+  27 -> 18 [label="m"]
+  28 [shape=circle,label=""];
+  28 -> 22 [label="L"]
+  29 [shape=circle,label=""];
+  29 -> 8 [label="n"]
+  30 [shape=circle,label=""];
+  30 -> 5 [label="("]
+  31 [shape=circle,label=""];
+  31 -> 10 [label="\u0020"]
+  32 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 32
+  32 -> 4 [label="S"]
+}

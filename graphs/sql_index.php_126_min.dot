@@ -1,0 +1,11 @@
+digraph cfg {
+  label="sql_index.php_126_min";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageParents.php : 36\nVar: _t2_46\nFunc: _main\n"];
+  n2 [shape=ellipse, label="/var/www/html/schoolmate/ManageParents.php : 36\nbuiltin function:\n.\n"];
+  n3 [shape=ellipse, label="/var/www/html/schoolmate/ManageParents.php : 36\nbuiltin function:\n.\n"];
+  n4 [shape=box, label="/var/www/html/schoolmate/ManageParents.php : 36\nVar: $_POST[username]\nFunc: _superglobals\n",style=filled];
+  n1 -> n2;
+  n2 -> n3;
+  n3 -> n4;
+}

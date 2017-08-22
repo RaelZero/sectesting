@@ -1,0 +1,5 @@
+digraph cfg {
+  label="sql_index.php_216_dep";
+  labelloc=t;
+  n1 [shape=doubleoctagon, label="/var/www/html/schoolmate/ManageAttendance.php : 99\nLit: SELECT semesterid, title FROM semesters WHERE startdate < CURDATE() < enddate\n"];
+}
