@@ -199,7 +199,7 @@ print("     </select>
    </table>
 
   <input type='hidden' name='addclass' value='' />
-  <input type='hidden' name='fullyear' value='$_POST[fullyear]' />
+  <input type='hidden' name='fullyear' value='".intval($_POST["fullyear"])."' />
   <input type='hidden' name='page2' value='".intval($page2)."' />
   <input type='hidden' name='logout' />
   <input type='hidden' name='page' value='".intval($page)."' />
