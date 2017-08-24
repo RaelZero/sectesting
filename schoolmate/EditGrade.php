@@ -1,7 +1,7 @@
 <?php
  $id = $_POST['delete'];
 
- $query = mysql_query("SELECT submitdate, points, comment, islate, gradeid FROM grades WHERE studentid = '$id[0]' AND assignmentid = '".intval($_POST['assignment'])."'")
+ $query = mysql_query("SELECT submitdate, points, comment, islate, gradeid FROM grades WHERE studentid = '".intval($id[0])."' AND assignmentid = '".intval($_POST['assignment'])."'")
    or die("EditGrade.php: Unable to retrieve the information about the grade - ".mysql_error());
 
  $grade = mysql_fetch_row($query);
@@ -21,7 +21,7 @@
    <tr class='even' valign='top'>
 	<td>");
 
-	$query = mysql_query('SELECT fname, lname FROM students WHERE studentid =\''.$id[0].'\'')
+	$query = mysql_query('SELECT fname, lname FROM students WHERE studentid =\''.".intval($id[0]).".'\'')
 			 or die('EditGrade.php: Unable to get the student\'s name - '.mysql_error());
 
 	$student = mysql_fetch_row($query);
@@ -48,7 +48,7 @@ print("	</td>
   <input type='hidden' name='gradeid' value='$grade[4]' />
   <input type='hidden' name='wasgrade' value='".number_format($grade[1],1)."' />
   <input type='hidden' name='wasdate' value='".( convertfromdb($grade[0]) != "//" ? convertfromdb($grade[0]) : "")."' />
-  <input type='hidden' name='student' value='$id[0]' />
+  <input type='hidden' name='student' value='".intval($id[0])."' />
   <input type='hidden' name='assignment' value='".intval($_POST['assignment'])."' />
   <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='page2' value='".intval($page2)."'>
