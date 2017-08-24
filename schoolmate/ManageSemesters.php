@@ -130,7 +130,7 @@
    while($smstr = mysql_fetch_row($query))
    {
 	$query2 = mysql_query("SELECT title FROM terms WHERE termid='$smstr[1]'");
-	$term = mysql_result($query2,0);
+	$term = htmlspecialchars(mysql_result($query2,0));
 	$row++;
 
 	if($row > ($_POST["onpage"]*25)-25 && $row <= ($_POST["onpage"]*25))
