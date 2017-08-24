@@ -66,7 +66,7 @@
    <input type='hidden' name='logout' />
    <input type='hidden' name='page' value='".intval($page)."' />
    <input type='hidden' name='selectclass' />
-   <input type='hidden' name='student' value='$_POST[student]' />
+   <input type='hidden' name='student' value='".intval($_POST["student"])."' />
    <input type='hidden' name='studentid' value='$studentid[0]' />
  </td>
  </tr>
