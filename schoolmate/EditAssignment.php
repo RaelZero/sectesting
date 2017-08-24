@@ -42,7 +42,7 @@
   <input type='hidden' name='editassignment'>
   <input type='hidden' name='assignmentid' value='".intval($id[0])."'>
   <input type='hidden' name='page2' value='".intval($page2)."'>
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='logout'>
   <input type='hidden' name='wastotal' value='$assignment[3]'>
   <input type='hidden' name='wasdate' value='$assignment[5]'>

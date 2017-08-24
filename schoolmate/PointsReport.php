@@ -39,7 +39,7 @@ print("
  }
  else
  {
-  $q = mysql_query("SELECT courseid FROM courses WHERE courseid = $_POST[selectclass] AND semesterid = $_POST[semester]");
+  $q = mysql_query("SELECT courseid FROM courses WHERE courseid = ".intval($_POST['selectclass'])." AND semesterid = $_POST[semester]");
   if(mysql_num_rows($q)==0)
   {
   $q = mysql_query("SELECT courseid FROM courses WHERE semesterid = $_POST[semester]");
@@ -72,7 +72,7 @@ print("  </select>
   if($_POST['selectclass']!=NULL)
   {
    $row=0;
-   $query = mysql_query("SELECT studentid, currentpoints FROM registrations WHERE courseid = $_POST[selectclass]");
+   $query = mysql_query("SELECT studentid, currentpoints FROM registrations WHERE courseid = ".intval($_POST['selectclass'])."");
    while($studentinfo = mysql_fetch_row($query))
    {
 	$row++;
@@ -82,7 +82,7 @@ print("  </select>
 	$name = mysql_fetch_row($q);
 
 	// Get Class's Total Points //
-	$q = mysql_query("SELECT totalpoints, aperc, bperc, cperc, dperc, fperc FROM courses WHERE courseid = $_POST[selectclass]");
+	$q = mysql_query("SELECT totalpoints, aperc, bperc, cperc, dperc, fperc FROM courses WHERE courseid = ".intval($_POST['selectclass'])."");
 	$classinfo = mysql_fetch_row($q);
 
 	// Calculate And Display //

@@ -17,12 +17,12 @@
    $query = mysql_query('SELECT semesterid,termid FROM courses WHERE courseid = '.$_POST["selectclass"]);
    $ids = mysql_fetch_row($query);
 
-   $query = mysql_query("INSERT INTO grades VALUES('', '$_POST[assignment]', '$_POST[selectclass]', '$ids[0]', '$ids[1]', '$_POST[student]', '$_POST[points]', '$_POST[comment]', '".converttodb($_POST['gradedate'])."', '".($_POST['late']==1 ? "1" : "0")."')")
+   $query = mysql_query("INSERT INTO grades VALUES('', '$_POST[assignment]', '".intval($_POST['selectclass'])."', '$ids[0]', '$ids[1]', '$_POST[student]', '$_POST[points]', '$_POST[comment]', '".converttodb($_POST['gradedate'])."', '".($_POST['late']==1 ? "1" : "0")."')")
 	or die("ManageGrades.php: Unable to insert the new grade - ".mysql_error());
   }
 
   // Update the amount of points the student has accumulated for this class //
-  $query = mysql_query("SELECT semesterid FROM courses WHERE courseid = $_POST[selectclass]");
+  $query = mysql_query("SELECT semesterid FROM courses WHERE courseid = ".intval($_POST['selectclass'])."");
   $id = mysql_fetch_row($query);
 
   $query = mysql_query("SELECT midtermdate FROM semesters WHERE semesterid = $id[0]");
@@ -35,16 +35,16 @@
   if($submitdate < $middate)
   {
    if($wasdate < $middate)
-	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints + $_POST[points] - $_POST[wasgrade]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = $_POST[selectclass] AND studentid = $_POST[student]");
+	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints + $_POST[points] - $_POST[wasgrade]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = ".intval($_POST['selectclass'])." AND studentid = $_POST[student]");
    else
-	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints - $_POST[wasgrade]), q1currpoints=(q1currpoints + $_POST[points]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = $_POST[selectclass] AND studentid = $_POST[student]");
+	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints - $_POST[wasgrade]), q1currpoints=(q1currpoints + $_POST[points]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = ".intval($_POST['selectclass'])." AND studentid = $_POST[student]");
   }
   else
   {
    if($wasdate < $middate)
-	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints - $_POST[wasgrade]), q2currpoints=(q2currpoints + $_POST[points]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = $_POST[selectclass] AND studentid = $_POST[student]");
+	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints - $_POST[wasgrade]), q2currpoints=(q2currpoints + $_POST[points]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = ".intval($_POST['selectclass'])." AND studentid = $_POST[student]");
    else
-	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints + $_POST[points] - $_POST[wasgrade]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = $_POST[selectclass] AND studentid = $_POST[student]");
+	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints + $_POST[points] - $_POST[wasgrade]), currentpoints=(currentpoints + $_POST[points] - $_POST[wasgrade]) WHERE courseid = ".intval($_POST['selectclass'])." AND studentid = $_POST[student]");
   }
  }
 
@@ -69,11 +69,11 @@
 
    if($submitdate < $middate)
    {
-	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints - $id[1]), currentpoints=(currentpoints - $id[1]) WHERE studentid = $id[3] AND courseid = $_POST[selectclass]");
+	$query = mysql_query("UPDATE registrations SET q1currpoints=(q1currpoints - $id[1]), currentpoints=(currentpoints - $id[1]) WHERE studentid = $id[3] AND courseid = ".intval($_POST['selectclass'])."");
    }
    else
    {
-	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints - $id[1]), currentpoints=(currentpoints - $id[1]) WHERE studentid = $id[3] AND courseid = $_POST[selectclass]");
+	$query = mysql_query("UPDATE registrations SET q2currpoints=(q2currpoints - $id[1]), currentpoints=(currentpoints - $id[1]) WHERE studentid = $id[3] AND courseid = ".intval($_POST['selectclass'])."");
    }
   }
  }
@@ -143,7 +143,7 @@ print("<script language='JavaScript'>
  <b>Assignment:</b>
  <select name='assignment' onChange='document.grades.addgrade.value=0;document.grades.deletegrade.value=0;document.grades.submit();'>");
 
- $query = mysql_query("SELECT * FROM assignments WHERE courseid = '$_POST[selectclass]'");
+ $query = mysql_query("SELECT * FROM assignments WHERE courseid = '".intval($_POST['selectclass'])."'");
 
  // Stop displaying information if the query returned a null set //
   if(mysql_fetch_row($query) == NULL)
@@ -167,7 +167,7 @@ print("<script language='JavaScript'>
   }
 
  // Get a list of all the assignments //
- $query = mysql_query("SELECT assignmentid,title FROM assignments WHERE courseid = '$_POST[selectclass]'")
+ $query = mysql_query("SELECT assignmentid,title FROM assignments WHERE courseid = '".intval($_POST['selectclass'])."'")
    or die("ManageGrades.php: Unable to get a list of assignments - ".mysql_error());
 
  $text = "";
@@ -197,7 +197,7 @@ print("  </select>
   </tr>");
 
   // Get the list of grades and students for this assignment //
-  $query = mysql_query("SELECT DISTINCT s.studentid, s.fname, s.lname FROM students s, registrations r WHERE s.studentid = r.studentid AND r.courseid = $_POST[selectclass] ORDER BY UPPER(s.lname) ASC")
+  $query = mysql_query("SELECT DISTINCT s.studentid, s.fname, s.lname FROM students s, registrations r WHERE s.studentid = r.studentid AND r.courseid = ".intval($_POST['selectclass'])." ORDER BY UPPER(s.lname) ASC")
 	or die("ManageGrades.php: Unable to get the list of students for this class - ".mysql_error());
 
   require_once("DBFunctions.php");
@@ -205,7 +205,7 @@ print("  </select>
   while($student = mysql_fetch_row($query))
   {
 
-   $q = mysql_query("SELECT gradeid, points, comment, submitdate, islate, studentid, comment FROM grades WHERE assignmentid = '$_POST[assignment]' AND courseid = '$_POST[selectclass]' AND studentid = '$student[0]'")
+   $q = mysql_query("SELECT gradeid, points, comment, submitdate, islate, studentid, comment FROM grades WHERE assignmentid = '$_POST[assignment]' AND courseid = '".intval($_POST['selectclass'])."' AND studentid = '$student[0]'")
 	or die("ManageGrades.php: Unable to get a list of gradess - ".mysql_error());
 
    $grade = mysql_fetch_row($q);
@@ -223,7 +223,7 @@ print("  </select>
 	<td>");
 
    // Calculate and display the letter grade //
-	$q = mysql_query("SELECT aperc,bperc,cperc,dperc,fperc FROM courses WHERE courseid = $_POST[selectclass]") or die("ManageGrades.php: Unable to get the grade percentages - ".mysql_error());
+	$q = mysql_query("SELECT aperc,bperc,cperc,dperc,fperc FROM courses WHERE courseid = ".intval($_POST['selectclass'])."") or die("ManageGrades.php: Unable to get the grade percentages - ".mysql_error());
 	$percs = mysql_fetch_row($q);
 
 	if($assignment[1]==0)
@@ -274,7 +274,7 @@ print("  </table>
 
   <input type='hidden' name='addgrade' />
   <input type='hidden' name='deletegrade' />
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='selectgrade' />
   <input type='hidden' name='page2' value='".intval($page2)."' />
   <input type='hidden' name='logout' />

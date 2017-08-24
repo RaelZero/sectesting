@@ -8,7 +8,7 @@ print("
  <form name='classes' action='./index.php' method='POST'>");
 
  // Get a list of all the students in this class //
- $query = mysql_query("SELECT studentid FROM registrations WHERE courseid = $_POST[selectclass]")
+ $query = mysql_query("SELECT studentid FROM registrations WHERE courseid = ".intval($_POST['selectclass'])."")
    or die("ViewStudents.php: Unable to get a list of students - ".mysql_error());
 
  while($info = mysql_fetch_row($query))
@@ -33,7 +33,7 @@ print("
   </tr>");
 
   // Print out the grades for each class //
-  $query =    mysql_query("SELECT totalpoints, aperc, bperc, cperc, dperc, fperc FROM courses WHERE courseid = $_POST[selectclass]")
+  $query =    mysql_query("SELECT totalpoints, aperc, bperc, cperc, dperc, fperc FROM courses WHERE courseid = ".intval($_POST['selectclass'])."")
 	or die("ViewStudents.php: Unable to get the list of classes this student is registered for - ".mysql_error());
 
   $classes = mysql_fetch_row($query);
@@ -42,7 +42,7 @@ print("
   for($i=0; $i<count($ids); $i++)   //while($classes = mysql_fetch_row($query))
   {
    $row++;
-   $q = mysql_query("SELECT currentpoints FROM registrations WHERE studentid = '$ids[$i]' AND courseid = $_POST[selectclass]");
+   $q = mysql_query("SELECT currentpoints FROM registrations WHERE studentid = '$ids[$i]' AND courseid = ".intval($_POST['selectclass'])."");
    $cinfo = mysql_fetch_row($q);
 
    // Calculate the Current Grade //
@@ -83,7 +83,7 @@ print("
 print("  </table>
   <br />
   <input type='button' value=' Back ' onClick='document.classes.page2.value=2;document.classes.submit();'>
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='page2' value='".intval($page2)."' />
   <input type='hidden' name='logout' />
   <input type='hidden' name='page' value='".intval($page)."' />

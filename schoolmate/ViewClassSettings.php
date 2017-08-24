@@ -3,10 +3,10 @@
  // Update the grading Scale //
  if($_POST['update'] == 1)
  {
-  $query = mysql_query("UPDATE courses SET aperc = '$_POST[aperc]', bperc = '$_POST[bperc]', cperc = '$_POST[cperc]', dperc = '$_POST[dperc]', fperc = '$_POST[fperc]' WHERE courseid = '$_POST[selectclass]'") or die("ClassSettings.php: Unable to update the grading scale - ".mysql_error());
+  $query = mysql_query("UPDATE courses SET aperc = '$_POST[aperc]', bperc = '$_POST[bperc]', cperc = '$_POST[cperc]', dperc = '$_POST[dperc]', fperc = '$_POST[fperc]' WHERE courseid = '".intval($_POST['selectclass'])."'") or die("ClassSettings.php: Unable to update the grading scale - ".mysql_error());
  }
 
- $query = mysql_query("SELECT aperc, bperc, cperc, dperc, coursename FROM courses WHERE courseid = $_POST[selectclass]") or die("ClassInfo.php: Unable to get the class information - ".mysql_error());
+ $query = mysql_query("SELECT aperc, bperc, cperc, dperc, coursename FROM courses WHERE courseid = ".intval($_POST['selectclass'])."") or die("ClassInfo.php: Unable to get the class information - ".mysql_error());
  $info = mysql_fetch_row($query);
 
    print(" <h1>Class Settings</h1>

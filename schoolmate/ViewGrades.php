@@ -29,7 +29,7 @@ print("
   </tr>");
 
   // Get the list of grades and students for this assignment //
-  $query = mysql_query("SELECT assignmentid, title FROM assignments WHERE courseid = $_POST[selectclass] ORDER BY duedate DESC")
+  $query = mysql_query("SELECT assignmentid, title FROM assignments WHERE courseid = ".intval($_POST['selectclass'])." ORDER BY duedate DESC")
 	or die("ViewGrades.php: Unable to get the list of assignments for this class - ".mysql_error());
 
   require_once("DBFunctions.php");
@@ -37,7 +37,7 @@ print("
   while($assignment = mysql_fetch_row($query))
   {
 
-   $q = mysql_query("SELECT gradeid, points, submitdate, islate, comment FROM grades WHERE studentid = '$studentid' AND courseid = '$_POST[selectclass]' AND assignmentid = '$assignment[0]'")
+   $q = mysql_query("SELECT gradeid, points, submitdate, islate, comment FROM grades WHERE studentid = '$studentid' AND courseid = '".intval($_POST['selectclass'])."' AND assignmentid = '$assignment[0]'")
 	or die("ManageGrades.php: Unable to get a list of gradess - ".mysql_error());
 
    $grade = mysql_fetch_row($q);
@@ -54,7 +54,7 @@ print("
 	<td>");
 
    // Calculate and display the letter grade //
-	$q = mysql_query("SELECT aperc,bperc,cperc,dperc,fperc FROM courses WHERE courseid = $_POST[selectclass]") or die("ManageGrades.php: Unable to get the grade percentages - ".mysql_error());
+	$q = mysql_query("SELECT aperc,bperc,cperc,dperc,fperc FROM courses WHERE courseid = ".intval($_POST['selectclass'])."") or die("ManageGrades.php: Unable to get the grade percentages - ".mysql_error());
 	$percs = mysql_fetch_row($q);
 
 	if($assignmentinfo[1]==0)
@@ -104,7 +104,7 @@ print("  </table>
 
   <input type='hidden' name='addgrade' />
   <input type='hidden' name='deletegrade' />
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='selectgrade' />
   <input type='hidden' name='page2' value='".intval($page2)."' />
   <input type='hidden' name='logout' />

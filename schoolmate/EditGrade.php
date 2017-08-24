@@ -50,7 +50,7 @@ print("	</td>
   <input type='hidden' name='wasdate' value='".( convertfromdb($grade[0]) != "//" ? convertfromdb($grade[0]) : "")."' />
   <input type='hidden' name='student' value='$id[0]' />
   <input type='hidden' name='assignment' value='$_POST[assignment]' />
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='date'>
   <input type='hidden' name='logout'>

@@ -95,7 +95,7 @@ print("   <a class='menu' href='javascript: logoutstudent();' onMouseover=\"wind
    <input type='hidden' name='page2' value='".intval($page2)."'>
    <input type='hidden' name='logout'>
    <input type='hidden' name='page' value='".intval($page)."'>
-   <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+   <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
    <input type='hidden' name='student' value='".intval($_POST["student"])."' />
  </form>
   </td>

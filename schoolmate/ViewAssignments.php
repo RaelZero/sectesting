@@ -3,7 +3,7 @@
  require_once("DBFunctions.php");
 
  // Get the coursename //
- $query = mysql_query("SELECT coursename FROM courses WHERE courseid = '$_POST[selectclass]'") or die("ManageAssignments.php: Unable to get the course name - ".mysql_error());
+ $query = mysql_query("SELECT coursename FROM courses WHERE courseid = '".intval($_POST['selectclass'])."'") or die("ManageAssignments.php: Unable to get the course name - ".mysql_error());
  $coursename = htmlspecialchars(mysql_result($query,0));
 
  print("
@@ -40,7 +40,7 @@
    }
 
    // Get and display the assignments //
-   $query = mysql_query("SELECT assignmentid, title, totalpoints, assigneddate, duedate, assignmentinformation FROM assignments WHERE courseid = $_POST[selectclass] ORDER BY assigneddate DESC")
+   $query = mysql_query("SELECT assignmentid, title, totalpoints, assigneddate, duedate, assignmentinformation FROM assignments WHERE courseid = ".intval($_POST['selectclass'])." ORDER BY assigneddate DESC")
 			or die("ManageAssignments.php: Unable to get a list of assignments - ".mysql_error());
    $row = 0;
    $actualrow = 0;
@@ -86,9 +86,9 @@ print("\n</center>
   <input type='hidden' name='deleteassignment'>
   <input type='hidden' name='selectassignment'>
   <input type='hidden' name='page2' value='".intval($page2)."'>
-  <input type='hidden' name='onpage' value='".intval($_POST[onpage])."'>
+  <input type='hidden' name='onpage' value='".intval(".intval($_POST['onpage']).")."'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
+  <input type='hidden' name='selectclass' value='".intval($_POST['selectclass'])."' />
   <input type='hidden' name='page' value='".intval($page)."'>
  </form>
  </td>
