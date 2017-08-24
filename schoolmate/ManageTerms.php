@@ -5,6 +5,7 @@
  {
   $_POST["startdate"] = converttodb($_POST["startdate"]);
   $_POST["enddate"] = converttodb($_POST["enddate"]);
+  $_POST["title"] = htmlspecialchars($_POST["title"]);
   $query = mysql_query("INSERT INTO terms VALUES('', '$_POST[title]', '$_POST[startdate]', '$_POST[enddate]')")
    or die("ManageTerms.php: Unable to insert new term - " . mysql_error());
  }
@@ -14,6 +15,7 @@
  {
   $_POST["startdate"] = converttodb($_POST["startdate"]);
   $_POST["enddate"] = converttodb($_POST["enddate"]);
+  $_POST["title"] = htmlspecialchars($_POST["title"]);
   $query = mysql_query("UPDATE `terms` SET `title`='$_POST[title]', `startdate`='$_POST[startdate]', `enddate`='$_POST[enddate]' WHERE `termid`='$_POST[termid]' LIMIT 1")
 	or die("ManageTerms.php: Unable to update the term information - ".mysql_error());
  }
