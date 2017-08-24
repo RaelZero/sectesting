@@ -20,7 +20,7 @@
   $query = mysql_query('SELECT termid FROM semesters WHERE semesterid = '.$_POST["semester"]);
   $termid = @mysql_result($query,0);
 
-  $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester]', '$termid', '$_POST[title]', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]','')")
+  $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester]', '$termid', '".htmlspecialchars($_POST["title"])."', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]','')")
 	or die("ManageClasses.php: Unable to insert new class - " . mysql_error());
   }
   else
@@ -36,14 +36,14 @@
    }
 
    // Insert the class for the first semester //
-   $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester]', '$termid', '$_POST[title]', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]', '')")
+   $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester]', '$termid', '".htmlspecialchars($_POST["title"])."', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]', '')")
 	or die("ManageClasses.php: Unable to insert new class - " . mysql_error());
 
    // Get it's ID //
    $course1 = mysql_insert_id();
 
    // Insert the class for the second semester //
-   $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester2]', '$termid', '$_POST[title]', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]', '')")
+   $query = mysql_query("INSERT INTO courses VALUES('', '$_POST[semester2]', '$termid', '".htmlspecialchars($_POST["title"])."', '$_POST[teacher]', '$_POST[sectionnum]', '$_POST[roomnum]', '$_POST[periodnum]','','','','','','','','','$dotw','$_POST[substitute]', '')")
 	or die("ManageClasses.php: Unable to insert new class - " . mysql_error());
 
    // Get it's ID //
@@ -70,7 +70,7 @@
    $dotw .= $days[$i];
   }
 
-  $query = mysql_query("UPDATE `courses` SET `coursename`='$_POST[title]', `teacherid`='$_POST[teacher]', `semesterid`='$_POST[semester]', `sectionnum`='$_POST[sectionnum]', `roomnum`='$_POST[roomnum]', `periodnum`='$_POST[periodnum]', `dotw`='$dotw', `substituteid`='$_POST[substitute]' WHERE `courseid`='$_POST[courseid]' LIMIT 1")
+  $query = mysql_query("UPDATE `courses` SET `coursename`='".htmlspecialchars($_POST["title"])."', `teacherid`='$_POST[teacher]', `semesterid`='$_POST[semester]', `sectionnum`='$_POST[sectionnum]', `roomnum`='$_POST[roomnum]', `periodnum`='$_POST[periodnum]', `dotw`='$dotw', `substituteid`='$_POST[substitute]' WHERE `courseid`='$_POST[courseid]' LIMIT 1")
 	or die("ManageClasses.php: Unable to update the class information - ".mysql_error());
  }
 
