@@ -4,7 +4,7 @@
 
  // Get the coursename //
  $query = mysql_query("SELECT coursename FROM courses WHERE courseid = '$_POST[selectclass]'") or die("ManageAssignments.php: Unable to get the course name - ".mysql_error());
- $coursename = mysql_result($query,0);
+ $coursename = htmlspecialchars(mysql_result($query,0));
 
  print("
  <h1>View Assignments</h1>
