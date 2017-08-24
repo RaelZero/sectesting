@@ -36,9 +36,9 @@
  print("</table>
   <br>
   <input type='button' value='Update' onClick='document.classes.update.value=1;document.classes.submit();'>
-   <input type='hidden' name='page2' value='$page2' />
+   <input type='hidden' name='page2' value='".intval($page2)."' />
    <input type='hidden' name='logout' />
-   <input type='hidden' name='page' value='$page' />
+   <input type='hidden' name='page' value='".intval($page)."' />
    <input type='hidden' name='selectclass' value='$_POST[selectclass]' />
    <input type='hidden' name='update' />
    </form>
