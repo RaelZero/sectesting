@@ -20,9 +20,9 @@
 	  <br>
 	  <form name='uhoh' action='./index.php' method='POST'>
 	  <center><input type='button' value='&nbsp;Back&nbsp;' onClick='document.uhoh.page2.value=22;document.uhoh.submit();'></center>
-	  <input type='hidden' name='page2' value='$page2'>
+	  <input type='hidden' name='page2' value='".intval($page2)."'>
 	  <input type='hidden' name='logout'>
-	  <input type='hidden' name='page' value='$page'>
+	  <input type='hidden' name='page' value='".intval($page)."'>
 	  </form>");
 	 }
 	}
@@ -204,10 +204,10 @@ print("\n</center>
   <input type='hidden' name='deleteparent'>
   <input type='hidden' name='selectparent'>
   <input type='hidden' name='studentid'>
-  <input type='hidden' name='page2' value='$page2'>
-  <input type='hidden' name='onpage' value='$_POST[onpage]'>
+  <input type='hidden' name='page2' value='".intval($page2)."'>
+  <input type='hidden' name='onpage' value='".intval($_POST[onpage])."'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='page' value='$page'>
+  <input type='hidden' name='page' value='".intval($page)."'>
  </form>
  </td>
  </tr>

@@ -92,10 +92,10 @@
 
 print("   <a class='menu' href='javascript: logoutstudent();' onMouseover=\"window.status='Log Out';return true;\" onMouseout=\"window.status='';return true;\">Log Out</a>
 
-   <input type='hidden' name='page2' value='$page2'>
+   <input type='hidden' name='page2' value='".intval($page2)."'>
    <input type='hidden' name='logout'>
-   <input type='hidden' name='page' value='$page'>
-   <input type='hidden' name='selectclass' value='$_POST[selectclass]' />
+   <input type='hidden' name='page' value='".intval($page)."'>
+   <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
    <input type='hidden' name='student' value='$_POST[student]' />
  </form>
   </td>

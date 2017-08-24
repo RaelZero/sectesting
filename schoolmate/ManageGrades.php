@@ -274,7 +274,7 @@ print("  </table>
 
   <input type='hidden' name='addgrade' />
   <input type='hidden' name='deletegrade' />
-  <input type='hidden' name='selectclass' value='$_POST[selectclass]' />
+  <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
   <input type='hidden' name='selectgrade' />
   <input type='hidden' name='page2' value='".intval($page2)."' />
   <input type='hidden' name='logout' />
