@@ -5,3 +5,12 @@ pixy/
 # WebScarab files
 webscarab*
 .keystore
+
+# jpegs of vulns classified as false positive
+jpegs/xss_index.php_2_min.jpg
+jpegs/xss_index.php_3_min.jpg
+jpegs/xss_index.php_4_min.jpg
+jpegs/xss_index.php_6_min.jpg
+jpegs/xss_index.php_10_min.jpg
+jpegs/xss_index.php_53_min.jpg
+jpegs/xss_index.php_321_min.jpg
