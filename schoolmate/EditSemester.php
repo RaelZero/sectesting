@@ -2,7 +2,7 @@
  $id = $_POST["delete"];
 
  // Get the information for the current semester //
- $query = mysql_query("SELECT title, startdate, midtermdate, enddate, type FROM semesters WHERE semesterid = $id[0]")
+ $query = mysql_query("SELECT title, startdate, midtermdate, enddate, type FROM semesters WHERE semesterid = ".intval($id[0])."")
    or die("EditSemester.php: Unable to retrieve the information about the semester to edit - ".mysql_error());
 
  $semester = mysql_fetch_row($query);
@@ -58,7 +58,7 @@
    </table>
 
   <input type='hidden' name='editsemester'>
-  <input type='hidden' name='semesterid' value='$id[0]'>
+  <input type='hidden' name='semesterid' value='".intval($id[0])."'>
   <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='logout'>
   <input type='hidden' name='page' value='".intval($page)."'>
