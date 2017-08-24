@@ -258,7 +258,7 @@ print("\n</center>
   <input type='hidden' name='deleteassignment'>
   <input type='hidden' name='selectassignment'>
   <input type='hidden' name='page2' value='".intval($page2)."'>
-  <input type='hidden' name='onpage' value='$_POST[onpage]'>
+  <input type='hidden' name='onpage' value='".intval($_POST[onpage])."'>
   <input type='hidden' name='logout'>
   <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
   <input type='hidden' name='page' value='".intval($page)."'>
