@@ -15,8 +15,8 @@
   //  Database Connection Information   //
   ////////////////////////////////////////
 	$dbaddress  = 'localhost';            // location of the database
-  $dbuser     = 'SchoolMaster';         // databse username
-	$dbpass     = 'schoolmaster';         // databse password
+  $dbuser     = 'schoolmate';         // databse username
+	$dbpass     = 'schoolmate';         // databse password
 	$dbname     = 'schoolmate';           // name of the database you are using
   ////////////////////////////////////////
 
@@ -33,7 +33,7 @@
   require_once("header.php");
 
   // Make the $page varialbe easy to use //
-  $page = $_POST["page"];
+  $page = intval($_POST["page"]);
 
   if($page == null)
 	$page = 0;
