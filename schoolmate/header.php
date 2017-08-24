@@ -8,7 +8,7 @@
  // Query to change the information if the user changes the info
  if($_POST["infoupdate"] == 1)
  {
-  $query = mysql_query("UPDATE schoolinfo SET schoolname = \"".htmlspecialchars($_POST["schoolname"])."\", address = '$_POST[schooladdress]', phonenumber = '$_POST[schoolphone]', sitetext = '".htmlspecialchars($_POST["sitetext"])."', sitemessage = '".htmlspecialchars($_POST["sitemessage"])."', numsemesters = '$_POST[numsemesters]', numperiods = '$_POST[numperiods]', apoint = '$_POST[apoint]', bpoint = '$_POST[bpoint]', cpoint = '$_POST[cpoint]', dpoint = '$_POST[dpoint]', fpoint = '$_POST[fpoint]' where schoolname = '$schoolname' LIMIT 1 ");
+  $query = mysql_query("UPDATE schoolinfo SET schoolname = \"".htmlspecialchars($_POST["schoolname"])."\", address = \"".htmlspecialchars($_POST["schooladdress"])."\", phonenumber = \"".htmlspecialchars($_POST["schoolphone"])."\", sitetext = \"".htmlspecialchars($_POST["sitetext"])."\", sitemessage = \"".htmlspecialchars($_POST["sitemessage"])."\", numsemesters = '$_POST[numsemesters]', numperiods = '$_POST[numperiods]', apoint = '$_POST[apoint]', bpoint = '$_POST[bpoint]', cpoint = '$_POST[cpoint]', dpoint = '$_POST[dpoint]', fpoint = '$_POST[fpoint]' where schoolname = '$schoolname' LIMIT 1 ");
   $schoolname = htmlspecialchars($_POST["schoolname"]);
  }
 
