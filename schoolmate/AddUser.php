@@ -55,9 +55,9 @@
    </table>
 
   <input type='hidden' name='adduser' value=''>
-  <input type='hidden' name='page2' value='$page2'>
+  <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='page' value='$page'>
+  <input type='hidden' name='page' value='".intval($page)."'>
 
  </form>
 
