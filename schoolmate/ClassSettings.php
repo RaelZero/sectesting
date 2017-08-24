@@ -39,7 +39,7 @@
    <input type='hidden' name='page2' value='".intval($page2)."' />
    <input type='hidden' name='logout' />
    <input type='hidden' name='page' value='".intval($page)."' />
-   <input type='hidden' name='selectclass' value='$_POST[selectclass]' />
+   <input type='hidden' name='selectclass' value='".intval($_POST[selectclass])."' />
    <input type='hidden' name='update' />
    </form>
  </td>

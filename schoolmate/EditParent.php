@@ -87,10 +87,10 @@ print("     </select>
    </table>
 
   <input type='hidden' name='editparent'>
-  <input type='hidden' name='parentid' value='$id[0]'>
-  <input type='hidden' name='page2' value='$page2'>
+  <input type='hidden' name='parentid' value='".intval($id[0])."'>
+  <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='page' value='$page'>
+  <input type='hidden' name='page' value='".intval($page)."'>
 
  </form>
 

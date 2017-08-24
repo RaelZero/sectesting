@@ -57,7 +57,7 @@ print(" <table width='100%' height='85%' border=0 cellspacing=0 cellpadding=0 al
 
 		  </tr>
 		 </table>
-	   <input type='hidden' name='page' value='$page'>
+	   <input type='hidden' name='page' value='".intval($page)."'>
 	   <input type='hidden' name='login'>
 	  </form>
 	 </div>
