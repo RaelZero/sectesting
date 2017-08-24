@@ -31,10 +31,10 @@
   <input type='hidden' name='addattendance' value='' />
   <input type='hidden' name='semester' value='". intval($_POST['semester']) ."' />
   <input type='hidden' name='student' value='". intval($_POST['student']) ."' />
-  <input type='hidden' name='page2' value='$page2'>
+  <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='date'>
   <input type='hidden' name='logout'>
-  <input type='hidden' name='page' value='$page'>
+  <input type='hidden' name='page' value='".intval($page)."'>
 
  </form>
 
