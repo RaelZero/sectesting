@@ -6,7 +6,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+CREATE DATABASE IF NOT EXISTS `schoolmate` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `schoolmate`;
 
+DROP TABLE IF EXISTS `adminstaff`;
 CREATE TABLE IF NOT EXISTS `adminstaff` (
 `adminid` int(11) NOT NULL,
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -14,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `adminstaff` (
   `lname` varchar(15) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `assignments`;
 CREATE TABLE IF NOT EXISTS `assignments` (
 `assignmentid` int(11) NOT NULL,
   `courseid` int(11) NOT NULL DEFAULT '0',
@@ -24,8 +28,12 @@ CREATE TABLE IF NOT EXISTS `assignments` (
   `assigneddate` date NOT NULL DEFAULT '0000-00-00',
   `duedate` date NOT NULL DEFAULT '0000-00-00',
   `assignmentinformation` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
+INSERT INTO `assignments` (`assignmentid`, `courseid`, `semesterid`, `termid`, `title`, `totalpoints`, `assigneddate`, `duedate`, `assignmentinformation`) VALUES
+(2, 1, 1, 1, 'Compiti', 2.00, '2017-01-01', '2017-02-01', 'Noiosi; noiosissimi');
+
+DROP TABLE IF EXISTS `courses`;
 CREATE TABLE IF NOT EXISTS `courses` (
 `courseid` int(11) NOT NULL,
   `semesterid` int(11) NOT NULL DEFAULT '0',
@@ -49,8 +57,9 @@ CREATE TABLE IF NOT EXISTS `courses` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 INSERT INTO `courses` (`courseid`, `semesterid`, `termid`, `coursename`, `teacherid`, `sectionnum`, `roomnum`, `periodnum`, `q1points`, `q2points`, `totalpoints`, `aperc`, `bperc`, `cperc`, `dperc`, `fperc`, `dotw`, `substituteid`, `secondcourseid`) VALUES
-(1, 1, 1, 'Fortgeschrittene Mat', 1, '1', '1', '1', 0.00, 0.00, 0.00, 0.000, 0.000, 0.000, 0.000, 0.000, 'MH', 0, 0);
+(1, 1, 1, 'Fortgeschrittene Mat', 1, '1', '1', '1', -30.00, 34.00, 4.00, 0.000, 0.000, 0.000, 0.000, 0.000, 'MH', 0, 0);
 
+DROP TABLE IF EXISTS `grades`;
 CREATE TABLE IF NOT EXISTS `grades` (
 `gradeid` int(11) NOT NULL,
   `assignmentid` int(11) NOT NULL DEFAULT '0',
@@ -64,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `islate` int(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+DROP TABLE IF EXISTS `parents`;
 CREATE TABLE IF NOT EXISTS `parents` (
 `parentid` int(11) NOT NULL,
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -74,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `parents` (
 INSERT INTO `parents` (`parentid`, `userid`, `fname`, `lname`) VALUES
 (1, 5, 'Ik ben', 'de vader');
 
+DROP TABLE IF EXISTS `parent_student_match`;
 CREATE TABLE IF NOT EXISTS `parent_student_match` (
 `matchid` int(11) NOT NULL,
   `parentid` int(11) NOT NULL DEFAULT '0',
@@ -83,6 +94,7 @@ CREATE TABLE IF NOT EXISTS `parent_student_match` (
 INSERT INTO `parent_student_match` (`matchid`, `parentid`, `studentid`) VALUES
 (1, 1, 1);
 
+DROP TABLE IF EXISTS `registrations`;
 CREATE TABLE IF NOT EXISTS `registrations` (
 `regid` int(11) NOT NULL,
   `courseid` int(11) NOT NULL DEFAULT '0',
@@ -97,6 +109,7 @@ CREATE TABLE IF NOT EXISTS `registrations` (
 INSERT INTO `registrations` (`regid`, `courseid`, `studentid`, `semesterid`, `termid`, `q1currpoints`, `q2currpoints`, `currentpoints`) VALUES
 (1, 1, 1, 1, 1, 0.00, 0.00, 0.00);
 
+DROP TABLE IF EXISTS `schoolattendance`;
 CREATE TABLE IF NOT EXISTS `schoolattendance` (
 `sattendid` int(11) NOT NULL,
   `studentid` int(11) NOT NULL DEFAULT '0',
@@ -104,12 +117,15 @@ CREATE TABLE IF NOT EXISTS `schoolattendance` (
   `semesterid` int(11) NOT NULL DEFAULT '0',
   `termid` int(11) NOT NULL DEFAULT '0',
   `type` enum('tardy','absent') DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 INSERT INTO `schoolattendance` (`sattendid`, `studentid`, `sattenddate`, `semesterid`, `termid`, `type`) VALUES
 (1, 1, '2017-01-01', 1, 1, 'absent'),
-(2, 1, '2017-01-02', 1, 1, 'tardy');
+(2, 1, '2017-01-02', 1, 1, 'tardy'),
+(3, 1, '0000-00-00', 1, 1, 'tardy'),
+(4, 1, '0000-00-00', 1, 1, 'tardy');
 
+DROP TABLE IF EXISTS `schoolbulletins`;
 CREATE TABLE IF NOT EXISTS `schoolbulletins` (
 `sbulletinid` int(11) NOT NULL,
   `title` varchar(15) NOT NULL DEFAULT '',
@@ -120,6 +136,7 @@ CREATE TABLE IF NOT EXISTS `schoolbulletins` (
 INSERT INTO `schoolbulletins` (`sbulletinid`, `title`, `message`, `bulletindate`) VALUES
 (1, 'Attention', '!', '2017-08-22');
 
+DROP TABLE IF EXISTS `schoolinfo`;
 CREATE TABLE IF NOT EXISTS `schoolinfo` (
   `schoolname` varchar(50) NOT NULL DEFAULT '',
   `address` varchar(50) DEFAULT NULL,
@@ -139,6 +156,7 @@ CREATE TABLE IF NOT EXISTS `schoolinfo` (
 INSERT INTO `schoolinfo` (`schoolname`, `address`, `phonenumber`, `sitetext`, `sitemessage`, `currenttermid`, `numsemesters`, `numperiods`, `apoint`, `bpoint`, `cpoint`, `dpoint`, `fpoint`) VALUES
 ('School Name', '1,Street', '52365895', '', 'This is the Message of the day:-\r\n\r\n\r\nWe think our fathers fools, so wise do we grow,\r\nno doubt our wisest sons would think us\r\nso.', NULL, 2, 4, 0.000, 0.000, 0.000, 0.000, 0.000);
 
+DROP TABLE IF EXISTS `semesters`;
 CREATE TABLE IF NOT EXISTS `semesters` (
 `semesterid` int(11) NOT NULL,
   `termid` varchar(15) NOT NULL DEFAULT '',
@@ -152,6 +170,7 @@ CREATE TABLE IF NOT EXISTS `semesters` (
 INSERT INTO `semesters` (`semesterid`, `termid`, `title`, `startdate`, `midtermdate`, `enddate`, `type`) VALUES
 (1, '1', 'First Semester', '2017-01-01', '2017-03-01', '2017-05-31', '1');
 
+DROP TABLE IF EXISTS `students`;
 CREATE TABLE IF NOT EXISTS `students` (
 `studentid` int(11) NOT NULL,
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -163,6 +182,7 @@ CREATE TABLE IF NOT EXISTS `students` (
 INSERT INTO `students` (`studentid`, `userid`, `fname`, `mi`, `lname`) VALUES
 (1, 4, 'Soy', 'S', 'El Estudiante');
 
+DROP TABLE IF EXISTS `teachers`;
 CREATE TABLE IF NOT EXISTS `teachers` (
 `teacherid` int(11) NOT NULL,
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -173,6 +193,7 @@ CREATE TABLE IF NOT EXISTS `teachers` (
 INSERT INTO `teachers` (`teacherid`, `userid`, `fname`, `lname`) VALUES
 (1, 3, 'Je Suis', 'Le Professeur');
 
+DROP TABLE IF EXISTS `terms`;
 CREATE TABLE IF NOT EXISTS `terms` (
 `termid` int(11) NOT NULL,
   `title` varchar(15) NOT NULL DEFAULT '',
@@ -183,6 +204,7 @@ CREATE TABLE IF NOT EXISTS `terms` (
 INSERT INTO `terms` (`termid`, `title`, `startdate`, `enddate`) VALUES
 (1, 'First Term', '2017-01-01', '2017-12-31');
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
 `userid` int(11) NOT NULL,
   `username` varchar(15) NOT NULL DEFAULT '',
@@ -248,7 +270,7 @@ ALTER TABLE `users`
 ALTER TABLE `adminstaff`
 MODIFY `adminid` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `assignments`
-MODIFY `assignmentid` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `assignmentid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 ALTER TABLE `courses`
 MODIFY `courseid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `grades`
@@ -260,7 +282,7 @@ MODIFY `matchid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `registrations`
 MODIFY `regid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `schoolattendance`
-MODIFY `sattendid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `sattendid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 ALTER TABLE `schoolbulletins`
 MODIFY `sbulletinid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `semesters`
