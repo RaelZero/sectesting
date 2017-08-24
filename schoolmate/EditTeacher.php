@@ -2,7 +2,7 @@
  $id = $_POST["delete"];
 
  // Get the information for the current teacher //
- $query = mysql_query("SELECT userid, fname, lname FROM teachers WHERE teacherid = $id[0]")
+ $query = mysql_query("SELECT userid, fname, lname FROM teachers WHERE teacherid = ".intval($id[0])."")
    or die("EditTeacher.php: Unable to retrieve the information about the teacher to edit - ".mysql_error());
 
  $teacher = mysql_fetch_row($query);
@@ -24,7 +24,7 @@
 	 <select name='username'>");
 
 	// print out the list of teachers for the drop-down box //
-	 $query = mysql_query("SELECT userid FROM teachers WHERE teacherid = $id[0]")
+	 $query = mysql_query("SELECT userid FROM teachers WHERE teacherid = ".intval($id[0])."")
 	   or die("AddTeacher: Unable to get the current teacher's userid - ".mysql_error());
 	 $currentuserid = mysql_result($query,0);
 
@@ -63,7 +63,7 @@ print("     </select>
    </table>
 
   <input type='hidden' name='editteacher'>
-  <input type='hidden' name='teacherid' value='$id[0]'>
+  <input type='hidden' name='teacherid' value='".intval($id[0])."'>
   <input type='hidden' name='page2' value='".intval($page2)."'>
   <input type='hidden' name='logout'>
   <input type='hidden' name='page' value='".intval($page)."'>
