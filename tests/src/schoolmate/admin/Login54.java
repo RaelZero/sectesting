@@ -9,15 +9,7 @@ public class Login54 extends Admin {
 	private String originalMessage = null;
 	
 	@Test
-	public void testSiteText() {
-		tester.beginAt("index.php");
-		tester.setTextField("username", "test");
-		tester.setTextField("password", "test");
-		tester.submit();
-		
-		//Check for successful login
-		tester.assertMatch("Manage Classes");
-		
+	public void testSiteText() {		
 		tester.clickLinkWithText("School");
 		
 		//Check for page navigation
