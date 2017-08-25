@@ -33,7 +33,7 @@
   require_once("header.php");
 
   // Make the $page varialbe easy to use //
-  $page = intval($_POST["page"]);
+  $page = $_POST["page"];
 
   if($page == null)
 	$page = 0;
