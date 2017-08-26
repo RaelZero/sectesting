@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current announcement //
  $query = mysql_query("SELECT * FROM schoolbulletins WHERE sbulletinid = $id[0]")

@@ -12,8 +12,8 @@ public class User {
 	
 	public User() {
 		tester = new WebTester();
-		//tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
-		tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
+		tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
+		//tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
 		
 		tester.beginAt("index.php");
 	}
@@ -47,6 +47,7 @@ public class User {
 		tester.assertLinkNotPresentWithText("XSS on page2");
 	}
 	
+	//injecting the selectclass variable tends to break the page so, for the sake of generality, no assertmatch is used
 	public void genericTestSelectclass(String selectclass, String page2) {
 		tester.setTextField("page2", page2);
 		tester.setTextField("selectclass", selectclass+"'><a href=\"http://unitn.it\">XSS on selectclass</a><br'");
@@ -54,5 +55,16 @@ public class User {
 		tester.submit();
 		
 		tester.assertLinkNotPresentWithText("XSS on selectclass");
+	}
+	
+	//injecting the delete variable breaks the page so, for the sake of generality, no assertmatch is used
+	//all tests on delete assume you click on "edit" and that the value of the delete[] variable is 1, so the method takes no params
+	public void genericTestDelete() {
+		tester.checkCheckbox("delete[]");
+		tester.setTextField("delete[]", "1 '><a href=\"http://unitn.it\">XSS on delete</a><br'");
+		
+		tester.clickButtonWithText("Edit");
+		
+		tester.assertLinkNotPresentWithText("XSS on delete");
 	}
 }

@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current class //
  $query = mysql_query("SELECT coursename, teacherid, semesterid, sectionnum, roomnum, periodnum, dotw, substituteid FROM courses WHERE courseid = $id[0]")

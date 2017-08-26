@@ -1,5 +1,5 @@
 <?php
- $id = $_POST['delete'];
+ $id = intval($_POST['delete']);
 
  $query = mysql_query("SELECT submitdate, points, comment, islate, gradeid FROM grades WHERE studentid = '".intval($id[0])."' AND assignmentid = '".intval($_POST['assignment'])."'")
    or die("EditGrade.php: Unable to retrieve the information about the grade - ".mysql_error());

@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current semester //
  $query = mysql_query("SELECT title, startdate, midtermdate, enddate, type FROM semesters WHERE semesterid = ".intval($id[0])."")

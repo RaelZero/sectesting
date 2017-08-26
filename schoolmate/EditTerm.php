@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current term //
  $query = mysql_query("SELECT title, startdate, enddate FROM terms WHERE termid = $id[0]")

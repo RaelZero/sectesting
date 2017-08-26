@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current parent //
  $query = mysql_query("SELECT userid, fname, lname FROM parents WHERE parentid = $id[0]")

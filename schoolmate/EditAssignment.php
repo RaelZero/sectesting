@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current assignment //
  $query = mysql_query("SELECT * FROM assignments WHERE assignmentid = $id[0]")

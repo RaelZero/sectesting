@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current user //
  $query = mysql_query("SELECT username, type FROM users WHERE userid = $id[0]")

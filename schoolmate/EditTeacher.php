@@ -1,5 +1,5 @@
 <?php
- $id = $_POST["delete"];
+ $id = intval($_POST["delete"]);
 
  // Get the information for the current teacher //
  $query = mysql_query("SELECT userid, fname, lname FROM teachers WHERE teacherid = ".intval($id[0])."")
