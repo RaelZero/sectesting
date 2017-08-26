@@ -22,6 +22,6 @@ public class StudentMain165 extends Student{
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "0");
+		this.genericTestSelectclass("1", "0", "Soy El Estudiante's Classes");
 	}
 }

@@ -22,7 +22,7 @@ public class ViewStudents181 extends Teacher{
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "8");
+		this.genericTestSelectclass("1", "8", "Students");
 	}
 }
 

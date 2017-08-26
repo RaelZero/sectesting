@@ -24,7 +24,7 @@ public class ViewGrades200 extends Parent{
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "3");
+		this.genericTestSelectclass("1", "3", "Grades");
 	}
 }
 

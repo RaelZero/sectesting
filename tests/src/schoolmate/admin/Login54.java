@@ -24,7 +24,7 @@ public class Login54 extends Admin {
 		
 		tester.clickLinkWithText("Log Out");
 		
-		tester.assertLinkNotPresentWithExactText("XSS on sitetext");
+		tester.assertLinkNotPresentWithText("XSS on sitetext");
 	}
 	
 	@After

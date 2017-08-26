@@ -22,7 +22,7 @@ public class ViewClassSettings88 extends Student{
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "1");
+		this.genericTestSelectclass("1", "1", "Class Settings");
 	}
 }
 

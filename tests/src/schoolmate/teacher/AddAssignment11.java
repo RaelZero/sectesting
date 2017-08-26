@@ -25,7 +25,7 @@ public class AddAssignment11 extends Teacher{
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "4");
+		this.genericTestSelectclass("1", "4", "Add Assignment");
 	}
 }
 
