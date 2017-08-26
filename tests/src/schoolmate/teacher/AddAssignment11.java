@@ -3,7 +3,7 @@ package schoolmate.teacher;
 import schoolmate.Teacher;
 import org.junit.*;
 
-public class AddAssignment11 extends Teacher{
+public class AddAssignment11 extends Teacher{	
 	@Before
 	public void init() {
 		tester.clickLinkWithText("Assignments");
@@ -15,17 +15,17 @@ public class AddAssignment11 extends Teacher{
 	
 	@Test
 	public void testPage() {
-		this.genericTestPage("2", "4");
+		this.genericTestPage("2", "4", "Add Assignment");
 	}
 	
 	@Test
 	public void testPage2(){
-		this.genericTestPage2("4");
+		this.genericTestPage2("4", "Add Assignment");
 	}
 	
 	@Test
 	public void testSelectclass() {
-		this.genericTestSelectclass("1", "4");
+		this.genericTestSelectclass("1", "4", "Add Assignment");
 	}
 }
 

@@ -5,7 +5,6 @@ import net.sourceforge.jwebunit.htmlunit.*;
 import net.sourceforge.jwebunit.junit.*;
 import com.gargoylesoftware.htmlunit.html.*;
 
-import org.junit.Test;
 import org.xml.sax.helpers.AttributesImpl;
 
 public class User {
@@ -30,28 +29,31 @@ public class User {
 		form.appendChild(submit);
 	}
 	
-	public void genericTestPage(String page, String page2) {
+	public void genericTestPage(String page, String page2, String pageName) {
 		tester.setTextField("page2", page2);
 		tester.setTextField("page", page+" '><a href=\"http://unitn.it\">XSS on page</a><br'");
 		
 		tester.submit();
 		
+		tester.assertMatch(pageName);
 		tester.assertLinkNotPresentWithText("XSS on page");
 	}
 	
-	public void genericTestPage2(String page2) {
+	public void genericTestPage2(String page2, String pageName) {
 		tester.setTextField("page2", page2+"'> <a href=\"www.unitn.it\">XSS on page2</a> <br '");
 		tester.submit();
 		
+		tester.assertMatch(pageName);
 		tester.assertLinkNotPresentWithText("XSS on page2");
 	}
 	
-	public void genericTestSelectclass(String selectclass, String page2) {
+	public void genericTestSelectclass(String selectclass, String page2, String pageName) {
 		tester.setTextField("page2", page2);
 		tester.setTextField("selectclass", selectclass+"'><a href=\"http://unitn.it\">XSS on selectclass</a><br'");
 		
 		tester.submit();
 		
+		tester.assertMatch(pageName);
 		tester.assertLinkNotPresentWithText("XSS on selectclass");
 	}
 }
