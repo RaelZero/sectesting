@@ -6,6 +6,8 @@ import schoolmate.Parent;
 public class ParentViewStudents90 extends Parent{
 	@Before
 	public void init() {
+		tester.clickLinkWithExactText("Soy El Estudiante");
+		tester.assertMatch("Soy El Estudiante's Classes");
 		tester.setWorkingForm("student");
 		addSubmitButton("//form[@name='student']");
 	}

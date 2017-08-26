@@ -8,8 +8,5 @@ public class Parent extends User{
 		
 		//Check for successful login
 		tester.assertMatch("Students of Ik ben de vader");
-	
-		tester.clickLinkWithExactText("Soy El Estudiante");
-		tester.assertMatch("Soy El Estudiante's Classes");
 	}
 }

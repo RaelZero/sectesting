@@ -5,7 +5,9 @@ import org.junit.*;
 
 public class ViewGrades200 extends Parent{	
 	@Before
-	public void init() {
+	public void init() {tester.clickLinkWithExactText("Soy El Estudiante");
+		tester.assertMatch("Soy El Estudiante's Classes");
+		
 		tester.clickLinkWithText("Fortgeschrittene Mat");
 		
 		tester.setWorkingForm("student");

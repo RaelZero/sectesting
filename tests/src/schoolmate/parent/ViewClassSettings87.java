@@ -6,6 +6,9 @@ import org.junit.*;
 public class ViewClassSettings87 extends Parent{	
 	@Before
 	public void init() {
+		tester.clickLinkWithExactText("Soy El Estudiante");
+		tester.assertMatch("Soy El Estudiante's Classes");
+		
 		tester.clickLinkWithText("Fortgeschrittene Mat");
 		tester.assertMatch("Class Settings");
 		
