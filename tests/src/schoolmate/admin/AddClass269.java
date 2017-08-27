@@ -25,7 +25,6 @@ public class AddClass269 extends Admin{
 		this.genericTestPage2("9", "Add New Class");
 	}
 	
-	/*
 	@Test
 	public void testFullyear() {
 		tester.clickButtonWithText("Add");
@@ -34,12 +33,12 @@ public class AddClass269 extends Admin{
 		tester.setWorkingForm("addclass");
 		addSubmitButton("//form[@name='addclass']");
 		
-		tester.setTextField("page2", "9");		
+		tester.setTextField("page2", "9");
 		tester.setTextField("fullyear", "1 '><a href=\"http://unitn.it\">XSS on fullyear</a><br'");
 		
 		tester.submit();
 		
 		tester.assertMatch("Add New Class");
-		tester.assertLinkNotPresent("XSS on fullyear");
-	}*/
+		tester.assertLinkNotPresentWithText("XSS on fullyear");
+	}
 }

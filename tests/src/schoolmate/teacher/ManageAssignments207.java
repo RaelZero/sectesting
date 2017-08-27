@@ -15,7 +15,6 @@ public class ManageAssignments207 extends Teacher{
 		tester.setTextField("password", "test");
 		tester.submit();
 		
-		
 		tester.clickLinkWithText("Classes");
 		
 		tester.setWorkingForm("classes");
@@ -37,7 +36,14 @@ public class ManageAssignments207 extends Teacher{
 		tester.setTextField("password", "test");
 		tester.submit();		
 		
-		tester.clickLinkWithText("XSS");
+		try{
+			tester.clickLinkWithText("XSS");
+		}
+		catch(AssertionError e) {
+			//The sanitized course name contains the "href" string, so I can click on that link
+			tester.clickLinkWithText("href");
+		}
+		
 		tester.assertMatch("Class Settings");
 		
 		tester.clickLinkWithText("Assignments");

@@ -28,28 +28,35 @@ public class EditGrade76 extends Teacher{
 		this.genericTestPage2("7", "Edit Grade");
 	}
 	
-	/*
+	@Test
+	public void testSelectclass() {
+		this.genericTestSelectclass("1", "7", "Edit Grade");
+	}
+	
 	@Test
 	public void testDelete() {
 		tester.clickLinkWithText("Grades");
 		tester.assertMatch("Grades");
 		
-		tester.getElementByXPath("//input[@type='checkbox']")
-		.setAttribute("value", "1 --) '><a href=\"http://unitn.it\">XSS on delete</a><br'");
-		
 		tester.setWorkingForm("grades");
-		addSubmitButton("//form[@name='grades']");
+		
+		tester.checkCheckbox("delete[]");
+		tester.getElementByXPath("//input[@type='checkbox']")
+		.setAttribute("value", "1 '><a href=\"http://unitn.it\">XSS on delete</a><br'");
+		
+		tester.clickButtonWithText("Edit");
+
+		tester.assertLinkNotPresentWithText("XSS on delete");
+	}
+	
+	@Test
+	public void testAssignment() {
+		tester.setTextField("assignment", "2 '><a href=\"http://unitn.it\">XSS on assignment</a><br'");
+		tester.setTextField("page2", "7");
 		
 		tester.submit();
 		
-		tester.assertMatch("Edit Grade");
-		tester.assertLinkNotPresentWithText("XSS on delete");
-	}
-	*/
-	
-	@Test
-	public void testSelectclass() {
-		this.genericTestSelectclass("1", "7", "Edit Grade");
+		tester.assertLinkNotPresentWithText("XSS on assignment");
 	}
 }
 

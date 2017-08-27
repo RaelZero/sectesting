@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import schoolmate.Admin;
 
-public class Login105 extends Admin {	
+public class Login105 extends Admin {
 	@Test
 	public void testPage() {
 		tester.setWorkingForm("admin");
@@ -14,7 +14,6 @@ public class Login105 extends Admin {
 		tester.setTextField("page", "0 '> <a href=\"http://unitn.it\">XSS on page</a> <br '");
 		tester.submit();
 		
-		tester.assertMatch("Login Text");
 		tester.assertLinkNotPresentWithText("XSS on page");
 	}
 	

@@ -15,8 +15,8 @@ public class User {
 	
 	public User() {
 		tester = new WebTester();
-		//tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
-		tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
+		tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
+		//tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
 		
 		tester.beginAt("index.php");
 	}
