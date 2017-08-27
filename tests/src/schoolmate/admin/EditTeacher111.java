@@ -1,6 +1,8 @@
 package schoolmate.admin;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Admin;
 
 public class EditTeacher111 extends Admin{

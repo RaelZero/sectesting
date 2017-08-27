@@ -1,6 +1,5 @@
 package schoolmate.admin;
 
-import org.junit.*;
 import schoolmate.Admin;
 
 public class ManageAssignments207 extends Admin {

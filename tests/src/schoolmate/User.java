@@ -1,11 +1,14 @@
 package schoolmate;
 
-import net.sourceforge.jwebunit.api.*;
-import net.sourceforge.jwebunit.htmlunit.*;
-import net.sourceforge.jwebunit.junit.*;
-import com.gargoylesoftware.htmlunit.html.*;
-
 import org.xml.sax.helpers.AttributesImpl;
+
+import com.gargoylesoftware.htmlunit.html.DomElement;
+import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.InputElementFactory;
+
+import net.sourceforge.jwebunit.api.IElement;
+import net.sourceforge.jwebunit.htmlunit.HtmlUnitElementImpl;
+import net.sourceforge.jwebunit.junit.WebTester;
 
 public class User {
 	public WebTester tester;

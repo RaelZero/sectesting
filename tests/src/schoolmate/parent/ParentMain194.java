@@ -1,6 +1,8 @@
 package schoolmate.parent;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Parent;
 
 public class ParentMain194 extends Parent{

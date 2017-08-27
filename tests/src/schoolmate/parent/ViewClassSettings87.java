@@ -1,7 +1,9 @@
 package schoolmate.parent;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Parent;
-import org.junit.*;
 
 public class ViewClassSettings87 extends Parent{	
 	@Before

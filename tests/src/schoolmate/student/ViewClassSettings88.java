@@ -1,7 +1,9 @@
 package schoolmate.student;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Student;
-import org.junit.*;
 
 public class ViewClassSettings88 extends Student{	
 	@Before

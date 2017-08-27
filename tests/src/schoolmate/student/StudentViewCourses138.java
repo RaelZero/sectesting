@@ -1,6 +1,8 @@
 package schoolmate.student;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Student;
 
 public class StudentViewCourses138 extends Student{

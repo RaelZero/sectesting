@@ -1,7 +1,9 @@
 package schoolmate.teacher;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Teacher;
-import org.junit.*;
 
 public class ViewStudents181 extends Teacher{	
 	@Before

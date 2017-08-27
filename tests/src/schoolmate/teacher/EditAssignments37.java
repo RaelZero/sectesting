@@ -1,6 +1,8 @@
 package schoolmate.teacher;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
+
 import schoolmate.Teacher;
 
 public class EditAssignments37 extends Teacher{
