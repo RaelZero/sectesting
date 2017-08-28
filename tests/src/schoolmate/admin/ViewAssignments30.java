@@ -26,6 +26,7 @@ public class ViewAssignments30 extends Admin{
 
 	@Test
 	public void testCoursename() {
+		// For the sake of convenience, the malicious text is checked in the Classes page 
 		tester.assertLinkNotPresentWithText("XSS");		
 	}
 	
