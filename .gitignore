@@ -1,8 +1,19 @@
-pixy/
+# Random junk in the VM
 /index.html
 /index.php
+
+# Pixy folder
+pixy/
 
 # WebScarab files
 webscarab*
 .keystore
 
+# zip file for the delivery folder
+delivery.zip
+
+# Eclipse files
+tests/.project
+tests/bin/
+tests/src/.project
+tests/.classpath
