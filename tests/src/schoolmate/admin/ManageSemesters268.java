@@ -27,13 +27,6 @@ public class ManageSemesters268 extends Admin{
 	
 	@Test
 	public void testOnpage() {
-		tester.setTextField("page2", "5");
-		
-		tester.setTextField("onpage", "1 '> <a href=\"www.unitn.it\">XSS on onpage</a> <br '");
-		
-		tester.submit();
-		
-		tester.assertMatch("Manage Semesters");
-		tester.assertLinkNotPresentWithText("XSS on onpage");
+		this.genericTestOnpage("5", "Manage Semesters");
 	}
 }

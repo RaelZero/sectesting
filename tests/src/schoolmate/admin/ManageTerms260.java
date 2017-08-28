@@ -27,13 +27,6 @@ public class ManageTerms260 extends Admin{
 	
 	@Test
 	public void testOnpage() {
-		tester.setTextField("page2", "6");
-		
-		tester.setTextField("onpage", "1 '> <a href=\"www.unitn.it\">XSS on onpage</a> <br '");
-		
-		tester.submit();
-		
-		tester.assertMatch("Manage Terms");
-		tester.assertLinkNotPresentWithText("XSS on onpage");
+		this.genericTestOnpage("6", "Manage Terms");
 	}
 }

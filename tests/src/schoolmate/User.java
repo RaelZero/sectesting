@@ -15,8 +15,8 @@ public class User {
 	
 	public User() {
 		tester = new WebTester();
-		tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
-		//tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
+		//tester.setBaseUrl("http://192.168.56.102/schoolmate/"); //Fixed version
+		tester.setBaseUrl("http://192.168.56.102/origSchoolmate/"); //Vulnerable version
 		
 		tester.beginAt("index.php");
 	}
@@ -70,5 +70,16 @@ public class User {
 		tester.clickButtonWithText("Edit");
 		
 		tester.assertLinkNotPresentWithText("XSS on delete");
+	}
+	
+	public void genericTestOnpage(String page2, String pageName) {
+		tester.setTextField("page2", page2);
+		
+		tester.setTextField("onpage", "1 '> <a href=\"www.unitn.it\">XSS on onpage</a> <br '");
+		
+		tester.submit();
+		
+		tester.assertMatch(pageName);
+		tester.assertLinkNotPresentWithText("XSS on onpage");
 	}
 }

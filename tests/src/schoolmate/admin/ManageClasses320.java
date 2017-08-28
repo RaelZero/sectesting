@@ -27,13 +27,6 @@ public class ManageClasses320 extends Admin{
 	
 	@Test
 	public void testOnpage() {
-		tester.setTextField("page2", "0");
-		
-		tester.setTextField("onpage", "1 '> <a href=\"www.unitn.it\">XSS on onpage</a> <br '");
-		
-		tester.submit();
-		
-		tester.assertMatch("Manage Classes");
-		tester.assertLinkNotPresentWithText("XSS on onpage");
+		this.genericTestOnpage("0", "Manage Classes");
 	}
 }
